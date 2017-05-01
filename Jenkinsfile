@@ -5,6 +5,7 @@ node {
     git url: 'https://github.com/yogeshkumararora/experiments.git'
  
     withMaven(
+       jdk: 'Java8',
         // Maven installation declared in the Jenkins "Global Tool Configuration"
         maven: 'M3',
         // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
