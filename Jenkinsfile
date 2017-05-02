@@ -18,4 +18,10 @@ node {
  
     } // withMaven will discover the generated Maven artifacts, JUnit reports and FindBugs reports
   }
+   
+   stage ('SonarQube - Code Quality and Unit Tests') {
+   }
+   
+   stage ('Deploy to Dev Env') {
+   }
 }
