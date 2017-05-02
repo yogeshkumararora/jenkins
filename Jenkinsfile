@@ -19,28 +19,28 @@ node {
     } // withMaven will discover the generated Maven artifacts, JUnit reports and FindBugs reports
   }
    
-   stage ('SonarQube - Code Quality and Unit Tests') {
+   stage ('Code Quality (SonarQube)') {
    }
    
-   stage ('AppScan - App Security Checks') {
+   stage ('Security Testing (AppScan)') {
    }
    
    stage ('Deploy to Dev Env') {
    }
    
-   stage ('Integration Testing on Dev Env using Selenium/Tosca/LISA') {
+   stage ('Integration Testing (Tosca/LISA)') {
    }
    
    stage ('Deployed to SIT Env') {
    }
    
-   stage ('Functional Testing on SIT Env using Selenium/Tosca/LISA') {
+   stage ('Functional Testing (Selenium/Tosca/LISA)') {
    }
    
    stage ('Deployed to DPE Env') {
    }
    
-   stage ('JMeter - Performance Testing on DPE Env') {
+   stage ('Performance Testing (JMeter)') {
    }
    
    stage ('Release to PROD') {
