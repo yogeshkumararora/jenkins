@@ -22,6 +22,28 @@ node {
    stage ('SonarQube - Code Quality and Unit Tests') {
    }
    
+   stage ('AppScan - App Security Checks') {
+   }
+   
    stage ('Deploy to Dev Env') {
    }
+   
+   stage ('Integration Testing on Dev Env using Selenium/Tosca/LISA') {
+   }
+   
+   stage ('Deployed to SIT Env') {
+   }
+   
+   stage ('Functional Testing on SIT Env using Selenium/Tosca/LISA') {
+   }
+   
+   stage ('Deployed to DPE Env') {
+   }
+   
+   stage ('JMeter - Performance Testing on DPE Env') {
+   }
+   
+   stage ('Release to PROD') {
+   }
+   
 }
