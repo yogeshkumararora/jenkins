@@ -1,6 +1,6 @@
 #!groovy
 node {
-   withEnv(["PATH+MAVEN=${tool 'M3'}/bin"]) {
+   withEnv(["JAVA_HOME=${tool 'Java8' }","PATH+MAVEN=${tool 'M3'}/bin"]) {
    stage ('Build') {
  
     git url: 'https://github.com/yogeshkumararora/experiments.git'
