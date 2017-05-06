@@ -1,5 +1,6 @@
 #!groovy
 node {
+   withEnv(["PATH+MAVEN=${tool 'M3'}/bin"]) {
    stage ('Build') {
  
     git url: 'https://github.com/yogeshkumararora/experiments.git'
@@ -22,7 +23,7 @@ node {
    stage ('Code Quality (SonarQube)') {
       
        withSonarQubeEnv('SonarQube-5.6.6') {
-         sh '$M3/bin/mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
+         sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
        }
    }
    
@@ -48,6 +49,8 @@ node {
    }
    
    stage ('Release to PROD') {
+   }
+      
    }
    
 }
