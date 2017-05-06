@@ -23,10 +23,9 @@ node {
       // requires SonarQube Scanner 2.8+
        def scannerHome = tool 'SonarQubeScanner';
        withSonarQubeEnv('SonarQube-5.6.6') {
-         sh "${scannerHome}/bin/sonar-scanner"
+         sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
        }
    }
-   
    
    stage ('Security Testing (AppScan)') {
    }
