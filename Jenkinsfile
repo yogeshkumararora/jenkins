@@ -22,7 +22,7 @@ node {
    stage ('Code Quality (SonarQube)') {
       // requires SonarQube Scanner 2.8+
        def scannerHome = tool 'SonarQubeScanner';
-       withSonarQubeEnv('My SonarQube Server') {
+       withSonarQubeEnv('SonarQube-5.6.6') {
          sh "${scannerHome}/bin/sonar-scanner"
        }
    }
